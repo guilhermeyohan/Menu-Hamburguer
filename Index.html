@@ -1,0 +1,100 @@
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <style>
+        #menu-hd {
+            width: 100%;
+            background-color: #2AA3AE;
+            overflow: hidden;
+        }
+        
+        #menu-hd img {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-left: 40px; 
+}
+        
+        #menu-links {
+            float: left;
+            margin-left: 60px; 
+        }
+        
+        #menu-links a {
+            display: inline-block;
+            padding: 20px;
+            text-decoration: none;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        
+        #menu-links a:hover {
+            background-color: #016069;
+        }
+        
+        #menu-hamburger {
+            display: none;
+        }
+        
+        @media screen and (max-width: 600px) {
+
+      #menu-hd img {
+        width: 100px;
+        height: auto;
+        display: block;
+        margin-left: 40%; 
+    
+}
+
+            #menu-links {
+                float: fixed;
+                display: none; /* Inicialmente oculto */
+                width: 100%; /* Ocupa toda a largura */
+                text-align: center; /* Centraliza os links */
+                margin-left: 00px; 
+                margin-top: 20px;
+            }
+            
+            #menu-links a {
+                display: block;
+                padding: 10px 0; /* Ajuste o espaçamento */
+            }
+            
+            #menu-hamburger {
+                display: block;
+                float: right;
+                padding: 20px;
+                cursor: pointer;
+            }
+        }
+    </style>
+
+<br>
+<div id="menu-hd">
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://d335luupugsy2.cloudfront.net/cms/files/296420/1709823442/$5xeo6iampsu" alt="Logo">
+    <div id="menu-links">
+        <a href="#rd-section-lvlhj431">Quem foi</a>
+        <a href="#rd-section-lvlhrmqr">VMV</a>
+        <a href="#rd-section-lvli1cj4">Nosso Alvo</a>
+        <a href="#rd-section-lvli64qt">Intenções</a>
+        <a href="#rd-section-lvlinyrj">Contato</a>
+    </div>
+    <div id="menu-hamburger">&#9776;</div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var menuLinks = document.getElementById('menu-links');
+        var menuHamburger = document.getElementById('menu-hamburger');
+        
+        menuHamburger.addEventListener('click', function() {
+            if (menuLinks.style.display === 'block') {
+                menuLinks.style.display = 'none';
+            } else {
+                menuLinks.style.display = 'block';
+            }
+        });
+    });
+</script>
+
